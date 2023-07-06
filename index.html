@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица выручки</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            background-color: lightgray;
+        }
+        
+        /* Стили для графика */
+        #chart {
+            width: 500px;
+            height: 300px;
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+    <table id="revenueTable">
+        <tr>
+            <th>Показатель</th>
+            <th>Текущий день</th>
+            <th>Вчера</th>
+        </tr>
+        <tr>
+            <td>Выручка, руб</td>
+            <td id="revenueToday"></td>
+            <td id="revenueYesterday"></td>
+        </tr>
+        <tr>
+            <td>Наличные</td>
+            <td id="cashToday"></td>
+            <td id="cashYesterday"></td>
+        </tr>
+        <tr>
+            <td>Безналичный расчет</td>
+            <td id="nonCashToday"></td>
+            <td id="nonCashYesterday"></td>
+        </tr>
+        <tr>
+            <td>Кредитные карты</td>
+            <td id="creditCardsToday"></td>
+            <td id="creditCardsYesterday"></td>
+        </tr>
+        <tr>
+            <td>Средний чек, руб</td>
+            <td id="avgCheckToday"></td>
+            <td id="avgCheckYesterday"></td>
+        </tr>
+        <tr>
+            <td>Средний гость, руб</td>
+            <td id="avgGuestToday"></td>
+            <td id="avgGuestYesterday"></td>
+        </tr>
+        <tr>
+            <td>Удаления из чека (после оплаты), руб</td>
+            <td id="removalsAfterToday"></td>
+            <td id="removalsAfterYesterday"></td>
+        </tr>
+        <tr>
+            <td>Удаления из счета (до оплаты), руб</td>
+            <td id="removalsBeforeToday"></td>
+            <td id="removalsBeforeYesterday"></td>
+        </tr>
+        <tr>
+            <td>Количество чеков</td>
+            <td id="numChecksToday"></td>
+            <td id="numChecksYesterday"></td>
+        </tr>
+        <tr>
+            <td>Количество гостей</td>
+            <td id="numGuestsToday"></td>
+            <td id="numGuestsYesterday"></td>
+        </tr>
+    </table>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script> <!-- Загрузка Google Charts API -->
+    <script src="script.js"></script>
+</body>
+</html>
